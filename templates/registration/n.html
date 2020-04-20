@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li>digital marketing</li>
+		<li>forex trading</li>
+		<li>food delivery business</li>
+		<li>social media and online marketing</li>
+		<li>photography</li>
+	</ul>
+
+</body>
+</html>
+def dispatch(self, request, *args, **kwargs):
+		obj = self.get_object()
+		if obj.author != self.request.user:
+			raise PermissionDenied
+			return super().dispatch(request, *args, **kwargs)
+git commit -m "My first commit"
+
+
+
+
+
+
+
+KGO422

@@ -1,0 +1,488 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RealNickyAdams</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  
+  
+  <script src="https://kit.fontawesome.com/fca625cbfc.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %} " rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %} " rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.2.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{% static 'assets/img/profile-img.jpg' %} " alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Nicky Adams</a></h1>
+        <div class="social-links mt-3 text-center">
+            <a href="https://dev.to/nicksonlangat20">
+  <i class="fab fa-dev" title="nicksonlangat20's DEV Profile"></i>
+</a>
+        
+          <a href="https://mobile.twitter.com/NicksonLangat20" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://github.com/LoyalFlames" class="github"><i class="bx bxl-github"></i></a>
+          <a href="instagram.com/realnickyadams" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="https://www.linkedin.com/in/nicky-adams-26081119a" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="{% url 'blog_index' %} "><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="{% url 'portfolio' %} "><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
+          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+        
+      <h1>Nicky Adams</h1>
+      
+      <p>I'm a <span class="typed" data-typed-items="Designer,Developer, Freelancer,Tutor "></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{% static 'assets/img/profile-img.jpg' %} " class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3> Web Developer &amp; UI/UX Designer. </h3>
+            <p class="font-italic">
+              I create stunning visuals and web applications that are written following best practices and conventions. I know Python programming language and JavaScript Scripting language and will take my time to learn a new language when necessary.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 28 July</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>My:</strong> <a href="{% url 'blog_index' %}">Website</a>                  
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>                  
+                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Yes</li>  
+                  <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                </ul>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>
+              I have over 2 years experience as a web developer. I currently work full time as a freelancer.  I have designed,developed and tested a substantial amount of projects. I write clean, reusable and responsive code. I usually hit my deadline on time and dive deeper in my projects. I have experience using Django framework,HTML5,CSS3, React.js and Version Control with Git. I can be a team member and give my best for the team. I am confident, hardworking and dependable. I work to ensure my clients are absolutely satisfied.
+            </p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="icofont-simple-smile"></i>
+              <span data-toggle="counter-up">8</span>
+              <p><strong>Happy Clients</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="icofont-document-folder"></i>
+              <span data-toggle="counter-up">15</span>
+              <p><strong>Projects</strong>completed so far.</p>
+            </div>
+          </div>
+
+          
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="icofont-users-alt-5"></i>
+              <span data-toggle="counter-up">10</span>
+              <p><strong>Developers</strong> that I have interacted and worked with.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Over the years, I have worked round the clock to sharpen my skills and will continue doing so ad-infinitum because for me, learning never stops. </p>
+        </div>
+
+<div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Bootstrap<i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">React Js<i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Django <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Web Scrapping <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Git<i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+       
+<p>I have familiarized with most of the best practices in the mentioned technologies.
+I ensure that I have covered all the CRUD functionalities in my projects while touching on emailing verifications when registering to an app, security issues notwithstanding. 
+I have projects that I can display in any interview, covering all the technologies mentioned above.</p>
+        </div>
+
+        
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Moi University,Main Campus.</h4>
+              <h5>2016 - 2020</h5>
+              <p><em>Bachelor's Degree</em></p>
+              <p>Moi University is ranked the second best institution for higher learning in Kenya.</p>
+            </div>
+            
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Projects</h3>
+            <div class="resume-item">
+              <h4>Iplex E-commerce Project..</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+      This project leverages Python to build a fully functioning eCommerce website and application using the Django framework.
+            </div>
+            <div class="resume-item">
+              <h4>Iplex Online Library Project.</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              Local Library website written in Django. 
+            </div>
+            <div class="resume-item">
+              <h4>Iplex Car Rental & Management Project.</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              For this project, our hypothetical client is a car rental firm. They want us to create a website that their customers can visit, look at the available inventory of cars, and finally book one of those cars. The client also wants an admin panel where they can manage the inventory and booking requests.
+            </div>
+            <div class="resume-item">
+              <h4>Iplex Real Estate Management Project.</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available  </em></p>
+              This web application will allow visitors to view listings, buy/rent property, and make inquiries. The visitor can also filter property based on price, location, bedrooms, parking spaces and more. It will also allow the admin to create, read, update and Delete Listings and Users.
+           </div>
+ <div class="resume-item">
+              <h4>Iplex Hospital</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available  </em></p>
+              A marketplace that allows patients to book appointments with doctors and hospitals
+Using the Django REST Framework, the server provides access to the application's feature set.
+            </div>
+            <div class="resume-item">
+              <h4>Secondary School Management System.</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              web-app made using django for management of a secondary school in Kenya. 
+            </div>
+         
+        <div class="resume-item">
+              <h4>Iplex Weather </h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              web-app made using django for weather analysis. 
+           </div>
+         
+        <div class="resume-item">
+              <h4>BookGram</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              A book review platform. 
+            </div>
+        
+        <div class="resume-item">
+              <h4>Askwe</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              A question and answer platform. 
+            </div>
+          
+       
+        
+        <div class="resume-item">
+              <h4>Awesome_pics</h4>
+              <h5>Bitbucket</h5>
+              <p><em>Demo Available </em></p>
+              A social media web app for sharing images. 
+            </div>
+          
+      </div>
+    </section><!-- End Resume Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>The following are individuals who can attest to my skills. </p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel">
+
+         
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Working with Nicky was really good. He's very thorough in his work and he offersta helping hand when necessary. A friend for keeps. 
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/kart.jpg' %} " class="testimonial-img" alt="">
+            <h3>Kart</h3>
+            <h4>Software Developer</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Fantastic work! I am just impressed by his service quality and working strategy. I hired him for the development of my online store and he has satisfied me to the full by delivering the exceptional solution. He has agreat expertise, is dedicated, attentive, talented and cares much about the client's needs. Highly recommended.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/ceo.jpg' %} " class="testimonial-img" alt="">
+            <h3>CEO</h3>
+            <h4>Store Owner</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I am  impressed with his work and may work with him again in the near future. Kudos! 
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/ben.jpg' %} " class="testimonial-img" alt="">
+            <h3>Bernard</h3>
+            <h4>Freelancer</h4>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Adams is a highly skilled developer with an eye for details. I got exactly what I wanted and more. I am looking forward to the next collaboration!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/moni.jpg' %} " class="testimonial-img" alt="">
+            <h3>Monica</h3>
+            <h4>Client</h4>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Am always open to new opportunities that allow me to do what I love doing. Contact me in case you want anything built for you or for questions.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>Bomet, Kenya</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>realnickyadams@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+254 713-754-946</p>
+              </div>
+
+              
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">2020 
+        &copy; Copyright <strong><span>RealNickyAdams </span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://dev.to/nicksonlangat20">
+Iplex
+</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %} "></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.min.js' %} "></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %} "></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %} "></script>
+      
+</body>
+
+</html>

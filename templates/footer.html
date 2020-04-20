@@ -1,0 +1,81 @@
+<style>
+footer {
+  background: #2b485c;
+  color: #aaa;
+  padding-top: 10px;
+}
+
+footer a {
+  color: #0894d1;
+}
+
+footer a:hover {
+  color: #0894d1;
+}
+
+footer h3 {
+ color: #0894d1;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .three-column {
+ overflow: hidden;
+}
+
+footer .three-column li{
+ width: 33.3333%;
+  float: left;
+  padding: 5px 0;
+}
+
+footer .socila-list {
+  overflow: hidden;
+  margin: 20px 0 10px;
+}
+
+footer .socila-list li {
+  float: left;
+  margin-right: 3px;
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .socila-list li:hover {
+  opacity: 1;
+}
+
+footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+footer .copyright {
+  padding: 15px 0;
+  background: #2b485c;
+  margin-top: 20px;
+  font-size: 15px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+footer .copyright span {
+  color: #0894d1;
+  
+}
+	</style>
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-lg-4 col-md-6">
+        <h3>About Me</h3>
+        <p>Hey there! I am Nicky Adams, a web designer/developer skilled in  crafting great web experiences. Coding and Designing have been my passion since the day I started working with computers at a tender age eventually diving  into web design/development in 2018. I enjoy creating beautifully designed, intuitive and functional websites. Here is a  <a href="{% url 'portfolio' %}" >link</a> to my portfolio. </p>     
+  </div>
+  <div class="copyright text-center">
+    Copyright &copy; {{current_year}} <span>RealNickyAdams</span>
+  </div>
+</footer>

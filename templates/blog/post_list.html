@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<br><br><br>
+	{% if request.user.is_superuser%}
+
+    <div class="card-footer text-center text-muted">
+<a class="btn btn-secondary btn-sm" href="{% url 'post_new'%}">New</a>
+</div>
+   {% endif %}
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {% for post in post_list %}
+        <div class="post-preview">
+            <a href="{{post.slug}}">
+                <h6 class="post-title">
+                    {{ post.title|upper}}
+                </h6>
+                <h6 class="post-subtitle">
+                    {{post.body|truncatechars:60}}
+                </h6>
+            </a>
+            <p class="post-meta">Posted by
+                <a href="#"> {{ post.author }}</a>
+                on {{ post.created_on.date}}</p>
+        </div>
+        <hr>
+
+        {% endfor %}
+        
+
+    </div>
+</div>
+
+{% endblock content %}

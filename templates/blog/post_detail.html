@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+   
+{% block content %}
+<br><br>
+<style>
+	
+h{
+	font-family:Georgia, serif;
+	
+	} 
+	</style>
+{% for message in messages %}
+  <div style="background-color: lightgreen" class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+    </div>
+{% endfor %}
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <h4>{% block title %} {{ post.title|upper}} {% endblock title %}</h4>
+        <p class=" text-muted">
+        Category:&nbsp;
+        {% for category in post.categories.all %}
+        <a href="{% url 'blog_category' category.name %}">
+        {{ category.name }}
+        </a>&nbsp;
+        {% endfor %}
+    </p>
+        <!--IMAGE FIELD-->
+    {% if post.image %}
+    <div class="">
+        <img class="img-fluid rounded" src="{{ post.image.url }}" alt="">
+    </div>
+    {% endif %}
+    <!--END IMAGE FIELD -->
+        <p class="post-subtitle">{{ post.body| linebreaks }}</p>
+</div>
+{% if request.user.is_superuser%}
+
+    <div class="card-footer text-center text-muted">
+<a class="btn btn-secondary btn-sm" href="{% url 'post_edit' post.slug %}">Edit</a>
+| <a class="btn btn-secondary btn-sm" href="{% url 'post_delete' post.slug %}">Delete</a>
+</div>
+   {% endif %}
+  
+{% endblock %}

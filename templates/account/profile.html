@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{%load blog_tags %}
+{% block content %}
+<div class="float-right">
+    <a href="{% url 'update' %}" class="btn btn-primary">Update Profile</a>
+    {% if user.is_superuser %}
+        <a href="{% url 'admin:index' %}" class="btn btn-success">Admin Site</a>
+    {% endif %}
+</div>
+    <p><b>Username: </b>{{ user.username }}</p>
+    <p><b>Email: </b>{% if user.email %}
+                        {{ user.email }}
+                    {% else %}
+                        No Email yet !
+                    {% endif %}</p>
+
+
+<div class="mt-5">
+
+    <div class="col-md-8 offset-md-2">
+        <hr>
+        {% if request.user.is_superuser%}
+            <a class="btn btn-secondary btn-sm" href="{% url 'post_new' %}">New Post</a>
+        {% endif%}
+        <br>
+                    <h5 class="">My Posts </h5>
+{% for post in post_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></span> &middot;
+                <span class="text-muted">by {{ post.author }} |{{ post.created_on.date }}</span>
+            <small>
+            |&nbsp;
+                Categories:&nbsp;
+                {% for category in post.categories.all %}
+                <a href="{% url 'blog_category' category.name %}">
+                    {{ category.name }}
+                </a>&nbsp;
+                {% endfor %}
+            </small>
+    </div>
+    <div class="card-body">
+        {{ post.body | slice:":110" }}...
+        
+        <br><br>
+    </div>
+</div>
+{% empty %}
+    <h4>You don't have any posts yet !!!</h4>
+{%endfor%}
+    
+            <!--Paginator -->
+            {% if post_list %}
+                {% include 'includes/paginator.html' %}
+            {% endif %}
+            <!-- End Paginator -->
+</div>
+{% endblock %}
